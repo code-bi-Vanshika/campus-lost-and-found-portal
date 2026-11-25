@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create account - Campus Lost &amp; Found</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+<noscript><div class="container"><div class="alert alert-error" style="margin-top:20px">This portal needs JavaScript. Please enable it in your browser.</div></div></noscript>
+<main>
+<div class="container narrow section">
+  <h1>Create your account</h1><p class="muted">Students and staff can register. Staff access is enabled by the university administrator after you sign up.</p>
+  <form class="card" id="register-form" novalidate style="margin-top:14px">
+    <div id="form-error"></div>
+    <div class="field"><label for="name">Full name</label><input id="name" class="input" autocomplete="name" maxlength="100" required><div class="field-error" id="name-err"></div></div>
+    <div class="field"><label for="email">University email</label><input id="email" class="input" type="email" autocomplete="email" maxlength="150" required><div class="field-error" id="email-err"></div></div>
+    <div class="field"><label for="phone">Phone number (optional)</label><input id="phone" class="input" type="tel" autocomplete="tel" maxlength="15"><div class="field-error" id="phone-err"></div></div>
+    <div class="form-grid">
+      <div class="field"><label for="password">Password</label><input id="password" class="input" type="password" autocomplete="new-password" maxlength="128" required><div class="hint">At least 12 characters.</div><div class="field-error" id="password-err"></div></div>
+      <div class="field"><label for="password2">Confirm password</label><input id="password2" class="input" type="password" autocomplete="new-password" maxlength="128" required><div class="field-error" id="password2-err"></div></div>
+    </div>
+    <button class="btn btn-primary btn-block" type="submit" id="submit">Create account</button>
+  </form>
+  <p class="center muted" style="margin-top:16px">Already registered? <a href="login.html">Log in</a></p>
+</div>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="js/pages/register.js"></script>
+</body>
+</html>

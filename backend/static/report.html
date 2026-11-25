@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Report an item - Campus Lost &amp; Found</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="site-header"></div>
+<noscript><div class="container"><div class="alert alert-error" style="margin-top:20px">This portal needs JavaScript. Please enable it in your browser.</div></div></noscript>
+<main>
+<div class="container mid">
+  <div class="page-head"><h1 id="page-title">Report an item</h1><p id="page-sub"></p></div>
+  <form class="card" id="report-form" novalidate>
+    <div id="form-error"></div>
+    <div class="field" id="type-field"><span class="label">What are you reporting?</span>
+      <div class="seg" id="type-seg"><button type="button" data-type="LOST" aria-pressed="true">I lost something</button><button type="button" data-type="FOUND" aria-pressed="false">I found something</button></div></div>
+    <div class="alert alert-warn hidden" id="found-tip" style="margin-bottom:18px"><span>&#9888;</span><div><strong>Keep one detail private.</strong> Do not post things only the owner would know (a PIN, serial number, what is inside). You will use them to check the real owner's claim.</div></div>
+    <div class="field"><label for="title">Title <span class="counter" id="title-count">0 / 150</span></label><input id="title" class="input" maxlength="150" placeholder="e.g. Black leather wallet" required></div>
+    <div class="form-grid">
+      <div class="field"><label for="category">Category</label><select id="category" class="input" required><option value="">Select a category</option></select></div>
+      <div class="field"><label for="item_date" id="date-label">Date</label><input id="item_date" class="input" type="date" required></div>
+    </div>
+    <div class="field"><label for="location" id="loc-label">Location</label><select id="location" class="input" required><option value="">Select a location</option></select></div>
+    <div class="field"><label for="description">Description</label><textarea id="description" class="input" maxlength="5000" placeholder="Colour, brand, size, condition, where exactly..." required></textarea></div>
+    <div class="field" id="image-field"><span class="label">Photos (optional) <span class="counter" id="img-count"></span></span>
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Add photos">Click or drop photos here<br><span class="small">JPEG, PNG or WebP, up to 2 MB each, maximum 5</span></div>
+      <input id="images" type="file" accept="image/jpeg,image/png,image/webp" multiple class="sr-only" tabindex="-1">
+      <div id="img-error" style="margin-top:8px"></div><div class="upload-grid" id="previews"></div></div>
+    <div class="row"><button class="btn btn-primary" type="submit" id="submit">Submit report</button><a class="btn btn-ghost" href="dashboard.html">Cancel</a></div>
+  </form>
+</div>
+</main>
+<div id="site-footer"></div>
+<script type="module" src="js/pages/report.js"></script>
+</body>
+</html>
